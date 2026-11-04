@@ -1,0 +1,156 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.todo-box {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #888;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+#todo-form {
+    display: flex;
+    gap: 10px;
+}
+
+#task-input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+#task-input:focus {
+    border-color: #667eea;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#todo-form button {
+    background: #667eea;
+    color: white;
+    padding: 12px 18px;
+}
+
+#todo-form button:hover {
+    background: #5266cf;
+}
+
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+#clear-all {
+    background: #ffe5e5;
+    color: #e74c3c;
+    padding: 8px 12px;
+}
+
+#task-list {
+    list-style: none;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #f5f6fa;
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.task-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+    color: #333;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-actions {
+    display: flex;
+    gap: 7px;
+}
+
+.complete-btn {
+    background: #d9f8e5;
+    color: #219653;
+    padding: 7px 10px;
+}
+
+.delete-btn {
+    background: #ffe0e0;
+    color: #e74c3c;
+    padding: 7px 10px;
+}
+
+#empty-message {
+    text-align: center;
+    color: #aaa;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 450px) {
+    .todo-box {
+        padding: 22px;
+    }
+
+    #todo-form {
+        flex-wrap: wrap;
+    }
+
+    #todo-form button {
+        width: 100%;
+    }
+}
